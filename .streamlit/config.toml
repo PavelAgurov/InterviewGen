@@ -1,0 +1,15 @@
+[theme]
+base="dark"
+textColor = "#f3f4f6"  # gray
+backgroundColor = "#111827"  # blue-ish
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+# Automatically rerun script when the file is modified on disk.
+runOnSave = true

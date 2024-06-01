@@ -1,0 +1,8 @@
+/.langchain.db
+/.logs
+/.streamlit/secrets.toml
+/__pycache__
+/backend/__pycache__
+/utils/__pycache__
+/backend/classes/__pycache__
+/ui_utils/__pycache__
