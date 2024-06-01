@@ -61,7 +61,7 @@ def hide_header_footer():
     """Hide header and footer"""
     hide_streamlit_style = """
             <style>
-            #MainMenu {visibility: hidden;}
+            div[data-testid='stHeader'] {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """

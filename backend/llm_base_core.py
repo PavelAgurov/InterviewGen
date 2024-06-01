@@ -30,7 +30,7 @@ class LLMBaseCore:
         self.all_settings = all_settings
 
         # Init cache
-        set_llm_cache(SQLiteCache(database_path=".langchain_cache\cache.db"))
+        set_llm_cache(SQLiteCache(database_path=".langchain.db"))
 
         # init env
         self.init_llm_environment(all_settings)
