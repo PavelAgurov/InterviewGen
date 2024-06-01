@@ -61,11 +61,11 @@ def hide_header_footer():
     """Hide header and footer"""
     hide_streamlit_style = """
             <style>
-            div[data-testid='stHeader'] {visibility: hidden;}
-            footer {visibility: hidden;}
+            [data-testid="stToolbar"] {visibility: hidden !important;}
+            footer {visibility: hidden !important;}
             </style>
             """
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)    
     
 # https://github.com/streamlit/streamlit/issues/3587
 def update_multiselect_style():
