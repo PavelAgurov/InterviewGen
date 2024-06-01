@@ -57,8 +57,8 @@ def streamlit_hack_remove_top_space():
         """, unsafe_allow_html=True)
 
 
-def hide_footer():
-    """Hide footer"""
+def hide_header_footer():
+    """Hide header and footer"""
     hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}

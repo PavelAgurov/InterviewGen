@@ -7,7 +7,7 @@ import streamlit as st
 import logging
 import pandas as pd
 
-from ui_utils.utils_streamlit import streamlit_hack_remove_top_space, show_page_header
+from ui_utils.utils_streamlit import streamlit_hack_remove_top_space, show_page_header, hide_header_footer
 from ui_utils.app_logger import init_streamlit_logger
 
 from backend.core import Core
@@ -44,6 +44,7 @@ show_page_header(
     ]
 )
 streamlit_hack_remove_top_space()
+hide_header_footer()
 
 st.info(f'Used {st.session_state.tokens_currently_used} tokens. Total used {st.session_state.tokens_total_used} tokens.')
 
