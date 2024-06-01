@@ -8,7 +8,7 @@ import os
 
 from langchain_openai import ChatOpenAI, AzureChatOpenAI
 from langchain.globals import set_llm_cache
-from langchain.cache import SQLiteCache
+from langchain_community.cache import SQLiteCache
 
 logger : logging.Logger = logging.getLogger()
 
@@ -30,7 +30,7 @@ class LLMBaseCore:
         self.all_settings = all_settings
 
         # Init cache
-        set_llm_cache(SQLiteCache(database_path=".langchain.db"))
+        set_llm_cache(SQLiteCache(database_path=".langchain_cache\cache.db"))
 
         # init env
         self.init_llm_environment(all_settings)

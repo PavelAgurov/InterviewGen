@@ -8,7 +8,7 @@ font = "sans serif"
 gatherUsageStats = false
 
 [client]
-toolbarMode = "minimal"
+toolbarMode = "viewer"
 
 [server]
 # Automatically rerun script when the file is modified on disk.
