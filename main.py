@@ -76,8 +76,9 @@ if button_generate:
     if not job_title:
         st.session_state.operation_errors = "Please enter a valid job title"
     else:
-        result_output = st.session_state.core.generate_interview_questions(job_title, profile, question_count)
-        st.session_state.result_topic_list = result_output.topics
+        with st.spinner("Generating questions..."):
+            result_output = st.session_state.core.generate_interview_questions(job_title, profile, question_count)
+            st.session_state.result_topic_list = result_output.topics
         tokens_used = result_output.tokens_used
         update_used_tokens(tokens_used)
     st.rerun()
