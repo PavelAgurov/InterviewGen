@@ -49,7 +49,10 @@ class LLMCore(LLMBaseCore):
         profile_note = ""
         if profile:
             profile = profile.replace("&", " and ")
-            profile_note = f"When you build question, first take into account the candidate's profile to be more concrete. <profile>{profile}</profile>"
+            profile_note = f"When you build question, first take into account the candidate's profile to be more concrete with questions. <profile>{profile}</profile>. Use additional skills to build special questions."
+
+        logger.info(f"Generate interview questions for {job_title} with {question_count} questions")
+        logger.info(f"profile_note: {profile_note}")
 
         with get_openai_callback() as cb:
             result_xml = self.chain_generate.invoke({
